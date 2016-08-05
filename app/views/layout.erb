@@ -26,6 +26,7 @@
           <% if current_user %>
             <li class="pipe-separate t-light-green left">hello, <%= current_user_name %>!</li>
             <li class="pipe-separate t-light-green left"><a href="/users/<%= current_user %>">view profile</a></li>
+            <li class="pipe-separate t-light-green left"><a href="/decks">view decks</a></li>
             <li class="pipe-separate t-light-green left"><a href="/users/logout">logout</a></li>
           <% else %>
             <li class="pipe-separate t-light-green left"><a href="/users/new">register</a></li>

@@ -61,10 +61,10 @@ input[type=text], input[type=password], textarea {
   border: 3px dotted #b3cccc;
 }
 
+
 .button {
-  background: #32bb7d;
-  color: #fefefe;
-  padding: 1em;
+  background: #fefefe;
+  color: #32bb7d;
   text-decoration: none;
 }
 
@@ -106,6 +106,10 @@ input[type=text], input[type=password], textarea {
   font-size: 2em;
 }
 
+.font-1-1-4 {
+  font-size: 1.25em;
+}
+
 .font-3-4{
   font-size: .75em;
 }
@@ -120,6 +124,14 @@ input[type=text], input[type=password], textarea {
 
 .mar-l-36 {
   margin-left: 36%;
+}
+
+.mar-l-41 {
+  margin-left: 41%;
+}
+
+.mar-l-45 {
+  margin-left: 45%;
 }
 
 .mar-b-1 {
@@ -262,8 +274,16 @@ input[type=text], input[type=password], textarea {
   width: 50%;
 }
 
+.w-200 {
+  width: 200px;
+}
+
 .w-600 {
   width: 600px;
+}
+
+.w-750 {
+  width: 750px;
 }
 
 .w-66 {
