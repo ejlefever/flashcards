@@ -1,4 +1,4 @@
-<div class="center border-1px-dotted-grey round-1 w-750">
+<div class="mar-t-2 center border-1px-dotted-grey round-1 w-750">
   <h3 class="text-c c-white">Question:<br><%= @cards[0].question %></h3>
   <form action='/decks/check/<%= @user_deck.id %>' method='post'>
     <input type="hidden" name="card_id" value="<%= @cards[0].id %>">

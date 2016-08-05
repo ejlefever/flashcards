@@ -51,15 +51,24 @@ input[type=text], input[type=password], textarea {
   background-color: #80aaff;
 }
 
-table, tr, td {
-  border: 2px solid black;
+td {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
   text-align: center;
   color: #051EB2;
 }
 
-/*th {
-  color: #fefefe;
-}*/
+td:last-child {
+  border-right: none;
+}
+
+table {
+  border-collapse: separate;
+  border-radius: 10px;
+  color: #051EB2;
+  text-align: center;
+  border: 2px solid black;
+}
 
 .bg-lt-yellow {
   background-color: #ffffe6;
