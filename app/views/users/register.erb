@@ -1,0 +1,22 @@
+<% @user = User.new() unless @user %>
+
+<div class="center border-1px-dotted-grey round-1 w-600">
+  <h1 class="text-c c-white">Register New User</h1>
+  <form action="/users" method="post">
+    <label for="name" class="block mar-l-36">Name:</label>
+    <input id="name" name="user[name]" type="text" class="block mar-b-2 mar-l-36" value="<%= @user.name %>">
+    <label for="email" class="block mar-l-36">E-mail:</label>
+    <input id="email" name="user[email]" type="text" class="block mar-b-2 mar-l-36" value="<%= @user.email %>">
+    <label for="password" class="block mar-l-36">Password:</label>
+    <input id="password" name="user[password]" type="password" class="block mar-b-2 mar-l-36">
+    <input type="submit" value="Create New User" class="block round-1 center mar-b-3">
+  </form>
+</div>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
