@@ -5,6 +5,7 @@ class CreateCards < ActiveRecord::Migration
       t.string :answer, null: false
       t.integer :deck_id, null: false
       t.boolean :guessed_correctly, null: false
+      t.boolean :guessed, null: false
 
       t.timestamps(null: false)
     end

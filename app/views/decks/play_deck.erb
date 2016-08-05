@@ -1,10 +1,9 @@
-<div>
-
-
-  <form action="/decks/check_answer" method="post">
-
-
+<div class="center border-1px-dotted-grey round-1 w-750">
+  <h3>Question: <%= @cards[0].question %></h3>
+  <form action='/decks/check/<%= @user_deck.id %>' method='post'>
+    <input type="hidden" name="card_id" value="<%= @cards[0].id %>">
+    <label for="guess" class="block mar-l-36 c-white">Enter your guess:</label>
+    <input id="guess" type="text" name="guess" placeholder="" class="block mar-l-41 mar-b-2">
+    <input type="submit" value="Answer" class="block round-1 mar-l-45 mar-b-3 button">
   </form>
-  <% @cards
-
 </div>
