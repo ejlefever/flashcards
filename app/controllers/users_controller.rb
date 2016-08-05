@@ -36,5 +36,16 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
+  @user_decks = UserDeck.where(user_id: @user.id)
+  @to_print = {}
+  @user_decks.each do |ud|
+    cards_number = Deck.find(ud.deck_id).cards.length
+    if @to_print[ud.deck_id]
+      @to_print[ud.deck_id] << [ud.round, ud.created_at, cards_number, ud.first_try_correct, ud.total_guesses]
+    else
+      @to_print[ud.deck_id] = []
+      @to_print[ud.deck_id] << [ud.round, ud.created_at, cards_number, ud.first_try_correct, ud.total_guesses]
+    end
+  end
   erb :'users/profile'
 end

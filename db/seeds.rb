@@ -11,12 +11,12 @@ deck_data = [{name: "Anti-Jokes"},
 Deck.create!(deck_data)
 
 antijokes = Deck.find_by(name: "Anti-Jokes")
-Card.create({question: "Why did Susie fall off the swing?", answer: "Because she had no arms or legs.", guessed_correctly: false, deck_id: antijokes.id })
-Card.create({question: "Knock, knock. Who's there?", answer: "Not Susie.", guessed_correctly: false, deck_id: antijokes.id })
-Card.create({question: "What's red and bad for your teeth?", answer: "A brick.", guessed_correctly: false, deck_id: antijokes.id })
+Card.create({question: "Why did Susie fall off the swing?", answer: "Because she had no arms or legs.", guessed_correctly: false, deck_id: antijokes.id, guessed: false })
+Card.create({question: "Knock, knock. Who's there?", answer: "Not Susie.", guessed_correctly: false, deck_id: antijokes.id, guessed: false })
+Card.create({question: "What's red and bad for your teeth?", answer: "A brick.", guessed_correctly: false, deck_id: antijokes.id, guessed: false })
 
 ascii = Deck.find_by(name: "Ascii Artists")
-Card.create({question: "Who loves ascii art the most?", answer: "Cauliflower King.", guessed_correctly: false, deck_id: ascii.id  })
+Card.create({question: "Who loves ascii art the most?", answer: "Cauliflower King.", guessed_correctly: false, deck_id: ascii.id, guessed: false  })
 
 UserDeck.create({deck_id: 1, user_id: 3, round: 1, first_try_correct: 3, total_guesses: 3})
 UserDeck.create({deck_id: 2, user_id: 1, round: 1, first_try_correct: 1, total_guesses: 1})

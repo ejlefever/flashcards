@@ -1,14 +1,14 @@
 <h1><%= @user.name %></h1>
 
-<% @user.decks.each do |d| %>
-  <h3><%= d.name %></h3>
-  <% userdecks =  d.user_decks.where(user_id: @user.id)%>
-  <% userdecks.each do |stats| %>
-    Round: <%= stats.round %><br>
-    Date: <%= stats.created_at %><br>
-    Cards in Deck: <%= d.cards.length %><br>
-    First Guess Correct: <%= stats.first_try_correct %><br>
-    Total Guesses: <%= stats.total_guesses %><br>
+<% @to_print.each do |deck_id, elems| %>
+  <h3><%= Deck.find(deck_id).name %></h3>
+  <% elems.each do |e| %>
+    Round: <%= e[0] %><br>
+    Date: <%= e[1] %><br>
+    Cards in Deck: <%= e[2] %><br>
+    First Guess Correct: <%= e[3] %><br>
+    Total Guesses: <%= e[4] %><br>
+    <br>
   <% end %>
   <br>
 <% end %>
