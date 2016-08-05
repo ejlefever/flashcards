@@ -1,0 +1,17 @@
+<div class="center border-1px-dotted-grey round-1 w-750">
+  <h1 class="text-c c-white"> Here are the decks you can play! :D</h1>
+  <% @deck.each do |d| %>
+    <ul>
+      <a href="/decks/<%= d.id %>/play"><div class="center border-1px-dotted-grey round-1 w-200">
+        <li class="text-c block c-white pad-1"><%= d.name %></li>
+      </div></a>
+    </ul>
+    <% end %>
+
+    <form action='/decks/create' method='post'>
+      <label for="name" class="block mar-l-36 c-white">Type a name to create a deck here:</label>
+      <input type="text" name="name" placeholder="" class="block mar-l-41 mar-b-2">
+      <input type="submit" value="Create Deck" class="block round-1 mar-l-45 mar-b-3 button">
+
+    </form>
+</div>

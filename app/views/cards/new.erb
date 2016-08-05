@@ -1,0 +1,27 @@
+<div>
+  <h1>Creat Cards for <%= @deck.name %></h1>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <ul>
+        <li><%= error %></li>
+      </ul>
+    <% end %>
+  <% end %>
+
+  <% if @deck %>
+  <% @deck.cards.each do |card| %>
+    <ul>
+      <li>Question: <%= card.question %> <br> Answer: <%= card.answer %></li>
+    </ul>
+  <% end %>
+  <% end %>
+
+  <form action="/cards/<%= @deck.id %>/create" method="post">
+    <input type='hidden'name="card[guessed_correctly]" value=false>
+    <input type="text" name="card[question]" placeholder="question"><br>
+    <input type="text" name="card[answer]" placeholder="answer">
+    <input type='Submit' value="Create Card">
+  </form>
+  <br>
+  <a href="/decks" class="c-white">Done creating cards</a>
+</div>
