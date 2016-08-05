@@ -1,0 +1,15 @@
+<div>
+  <h1> Here are the decks you can play! :D</h1>
+  <% @deck.each do |d| %>
+    <ul>
+      <li><%= d.name %></li>
+      <a href="/decks/<%= d.id %>/play">Play</a><br>
+    </ul>
+    <% end %>
+
+    <form action='/decks/create' method='post'>
+      Type a name to create a deck here: <input type="text" name="name" placeholder="">
+      <input type="submit" value="Create Deck">
+
+    </form>
+</div>
