@@ -18,13 +18,14 @@
   <title></title>
 </head>
 <body>
-  <header role="banner" class="mar-t-5 pad-t-2 pad-b-4 pad-s-1 wrap-float bg-white">
+  <header role="banner" class="pad-t-3 pad-b-3 pad-s-1 wrap-float bg-lt-yellow">
     <div class="w-100 center wrap-float">
       <nav class="clearfix mar-b-1">
-        <ul class="no-bullets no-margin no-padding right">
-          <li class="pipe-separate t-light-green left"><a href="/">home</a></li>
+        <h1 class="t-light-green left mar-0 pad-l-2">Flashcards</h1>
+        <ul class="no-bullets no-margin pad-1 right">
+          <li class="pipe-separate t-light-green left v-align-center"><a href="/">home</a></li>
           <% if current_user %>
-            <li class="pipe-separate t-light-green left">hello, <%= current_user_name %>!</li>
+            <li class="pipe-separate t-light-green left v-align-center">hello, <%= current_user_name %>!</li>
             <li class="pipe-separate t-light-green left"><a href="/users/<%= current_user %>">view profile</a></li>
             <li class="pipe-separate t-light-green left"><a href="/decks">view decks</a></li>
             <li class="pipe-separate t-light-green left"><a href="/users/logout">logout</a></li>

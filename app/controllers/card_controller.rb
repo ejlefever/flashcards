@@ -8,7 +8,7 @@ post '/cards/:id/create' do
       @deck
       erb :'/cards/new'
     else
-      @errors = card.errors.full_messeges
+      @errors = card.errors.full_messages
       erb :'/cards/new'
     end
   else

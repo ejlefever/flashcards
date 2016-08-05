@@ -1,5 +1,16 @@
-<div>
-  <h1>Creat Cards for <%= @deck.name %></h1>
+<div class="center border-1px-dotted-grey round-1 w-600">
+  <h1 class="text-c c-white">Create Cards for <%= @deck.name %></h1>
+
+  <form action="/cards/<%= @deck.id %>/create" method="post">
+    <input type='hidden'name="card[guessed_correctly]" value=false>
+    <input type='hidden'name="card[guessed]" value=false>
+    <input type="text" name="card[question]" placeholder="question" class="block mar-l-36"><br>
+    <input type="text" name="card[answer]" placeholder="answer" class="block mar-b-2 mar-l-36">
+    <input type='Submit' value="Create Card" class="block round-1 center button">
+  </form>
+  <br>
+  <a href="/decks" class="block round-1 center mar-b-1 button w-170 text-c">Done Creating Cards</a>
+
   <% if @errors %>
     <% @errors.each do |error| %>
       <ul>
@@ -8,20 +19,15 @@
     <% end %>
   <% end %>
 
+
   <% if @deck %>
-  <% @deck.cards.each do |card| %>
-    <ul>
-      <li>Question: <%= card.question %> <br> Answer: <%= card.answer %></li>
-    </ul>
-  <% end %>
+    <% @deck.cards.each do |card| %>
+      <ul>
+        <div class="mar-l-19 border-1px-dotted-grey round-1 w-300">
+          <li class=" block text-c c-white pad-3-4">Question: <%= card.question %> <br> Answer: <%= card.answer %></li>
+        </div>
+      </ul>
+    <% end %>
   <% end %>
 
-  <form action="/cards/<%= @deck.id %>/create" method="post">
-    <input type='hidden'name="card[guessed_correctly]" value=false>
-    <input type="text" name="card[question]" placeholder="question"><br>
-    <input type="text" name="card[answer]" placeholder="answer">
-    <input type='Submit' value="Create Card">
-  </form>
-  <br>
-  <a href="/decks" class="c-white">Done creating cards</a>
 </div>
