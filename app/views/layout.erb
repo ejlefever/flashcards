@@ -23,7 +23,13 @@
       <nav class="clearfix mar-b-1">
         <ul class="no-bullets no-margin no-padding right">
           <li class="pipe-separate t-light-green left"><a href="/">home</a></li>
-          <li class="pipe-separate t-light-green left"><a href="/users/new">register</a></li>
+          <% if current_user %>
+            <li class="pipe-separate t-light-green left">hello, <%= current_user_name %>!</li>
+            <li class="pipe-separate t-light-green left"><a href="/users/logout">logout</a></li>
+          <% else %>
+            <li class="pipe-separate t-light-green left"><a href="/users/new">register</a></li>
+            <li class="pipe-separate t-light-green left"><a href="/users/login">login</a></li>
+          <% end %>
         </ul>
       </nav>
     </div>

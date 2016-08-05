@@ -1,0 +1,19 @@
+<h1>Let Me In!!!</h1>
+
+<% @email = "" unless @email %>
+
+<form action="/users/login" method="post">
+  <label for="email">E-mail:</label>
+  <input id="email" name="email" type="text" class="block mar-b-2" value="<%= @email %>">
+  <label for="password">Password:</label>
+  <input id="password" name="password" type="password" class="block mar-b-2">
+  <input type="submit" value="Seriously, let me in.">
+</form>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
