@@ -8,6 +8,7 @@ html {
 
 body {
   height: 100%;
+  background-color: #32bb7d;
 }
 
 a {
@@ -54,6 +55,10 @@ input[type=text], input[type=password], textarea {
 
 .bg-white {
   background-color: #fefefe;
+}
+
+.border-1px-dotted-grey {
+  border: 3px dotted #b3cccc;
 }
 
 .button {
@@ -111,6 +116,10 @@ input[type=text], input[type=password], textarea {
 
 .hover-underline:hover {
   text-decoration: underline;
+}
+
+.mar-l-36 {
+  margin-left: 36%;
 }
 
 .mar-b-1 {
@@ -251,6 +260,10 @@ input[type=text], input[type=password], textarea {
 
 .w-50 {
   width: 50%;
+}
+
+.w-600 {
+  width: 600px;
 }
 
 .w-66 {
