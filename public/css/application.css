@@ -73,6 +73,10 @@ table, tr, td {
   border: 3px dotted #b3cccc;
 }
 
+.border-1px-solid-black {
+  border: 1px solid black;
+}
+
 .button {
   background: #fefefe;
   color: #32bb7d;
@@ -139,6 +143,10 @@ table, tr, td {
 
 .mar-0 {
   margin: 0px;
+}
+
+.mar-l-19 {
+  margin-left: 19%;
 }
 
 .mar-l-36 {
@@ -319,10 +327,17 @@ table, tr, td {
   width: 50%;
 }
 
+.w-170 {
+  width: 170px;
+}
+
 .w-200 {
   width: 200px;
 }
 
+.w-300 {
+  width: 300px;
+}
 .w-600 {
   width: 600px;
 }
